@@ -44,10 +44,10 @@ permalink: /yacht
 *Bavaria Cruiser 46*
 
 ### Классический вариант яхты
-![Классический вариант яхты](./attachments/5dcd67e917f24d509603e5c5.jpeg)  
+![Классический вариант яхты](./attachments/5dcd67e917f24d509603e5c5.jpeg)
 *Классический вариант яхты*
 
 ## Дополнительная информация
 
-Примерный класс яхты и детальное описание можно найти в [этом объявлении](https://www.boataround.com/ru/yachta/jeanneau-sun-odyssey-490-senorita?checkIn=2024-09-07&checkOut=2024-09-14).
+Примерный класс яхты и детальное описание можно найти в [этом объявлении](https://www.boataround.com/ru/yachta/jeanneau-sun-odyssey-490-senorita?checkIn=2024-09-07&checkOut=2024-09-14){:target="_blank"}.
 

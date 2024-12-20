@@ -11,9 +11,26 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
     {% include head-custom.html %}
+    <style>
+      .dlkn-header {
+        position: relative;
+      }
+      .dlkn-header a {
+        position: absolute;
+        left: 20px;
+        top: 0;
+        bottom: 0;
+        z-index: 1000;
+        margin: auto;
+        height: fit-content;
+      }
+    </style>
   </head>
   <body>
     <a id="skip-to-content" href="#content">Skip to the content.</a>
+    <header class="page-header dlkn-header" role="banner">
+      <a href="/" class="btn">На главную</a>
+    </header>
 
     <main id="content" class="main-content" role="main">
       {{ content }}
