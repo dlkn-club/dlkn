@@ -24,7 +24,7 @@ description: >- ## О сайте
   Добро пожаловать на официальный сайт нашего яхтингового сообщества! 
   Здесь вы найдете всю необходимую информацию для планирования и участия в наших совместных путешествиях по Средиземному морю. 
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://kostozy.github.io/dlkn" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://dlkn.club" # the base hostname & protocol for your site, e.g. http://example.com
 
 
 # Build settings
