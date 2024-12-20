@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ site.lang | default: "en-US" }}">
+<html lang="{{ site.lang | default: "ru-RU" }}">
   <head>
     <meta charset="UTF-8">
 
@@ -19,7 +19,7 @@
       <h1 class="project-name">{{ page.title | default: site.title | default: site.github.repository_name }}</h1>
       <h2 class="project-tagline">{{ page.description | default: site.description | default: site.github.project_tagline }}</h2>
       {% if page.external_url %}
-        <a href="{{ page.external_url }}" class="btn">Ссылка на общую таблицу</a>
+        <a href="{{ page.external_url }}" target="_blank" class="btn">Ссылка на общую таблицу</a>
       {% endif %}
     </header>
 
