@@ -1,6 +1,6 @@
 ---
 layout: main
-permalink: /clothes
+permalink: /boat
 
 ---
 
