@@ -17,7 +17,7 @@ title: Предстоящий поход
 - 1 неделя: Фетхие — Бодрум, 3 мая – 10 мая 
 - 2 неделя: Бодрум — Фетхие, 10 мая – 17 мая
 - Марина выхода в Фетхие: [Likiya Yacht Club](https://maps.app.goo.gl/7aMeQV8SzwTPjvWz8)
-- Марина выхода в Бодруме: ЕBD
+- Марина выхода в Бодруме: [D-Marin](https://maps.app.goo.gl/GokAQwpYpXgnDhhe9){:target="_blank"}
 
 ## Маршрут
 
