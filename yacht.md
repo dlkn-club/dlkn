@@ -37,9 +37,9 @@ permalink: /yacht
 ## Дополнительная информация
 
 Примерный яхт и детальные описания можно найти, например, на следующих страницах:
-- [раз](https://www.boataround.com/ru/yachta/jeanneau-sun-odyssey-490-senorita?checkIn=2024-09-07&checkOut=2024-09-14){:target="_blank"}.
-- [два](https://saysail.com/en/yacht/hanse-458-gobun-fethiye-lykia-yacht-club-turkey/2?date_from=2025-03-08&date_to=2025-03-15){:target="_blank"}.
-- [три](https://saysail.com/en/yacht/hanse-510-kille-fethiye-lykia-yacht-club-turkey/26?date_from=2025-03-08&date_to=2025-03-15){:target="_blank"}.
-- [катамаран](https://saysail.com/en/yacht/excess-11-kale-i-fethiye-lykia-yacht-club-turkey/29?date_from=2025-03-08&date_to=2025-03-15){:target="_blank"}.
-- [катамаран покруче](https://saysail.com/en/yacht/bali-46-solo-star-fethiye-lykia-yacht-club-turkey/28?date_from=2025-03-08&date_to=2025-03-15){:target="_blank"}.
+- [раз](https://www.boataround.com/ru/yachta/jeanneau-sun-odyssey-490-senorita?checkIn=2024-09-07&checkOut=2024-09-14){:target="_blank"}
+- [два](https://saysail.com/en/yacht/hanse-458-gobun-fethiye-lykia-yacht-club-turkey/2?date_from=2025-03-08&date_to=2025-03-15){:target="_blank"}
+- [три](https://saysail.com/en/yacht/hanse-510-kille-fethiye-lykia-yacht-club-turkey/26?date_from=2025-03-08&date_to=2025-03-15){:target="_blank"}
+- [катамаран](https://saysail.com/en/yacht/excess-11-kale-i-fethiye-lykia-yacht-club-turkey/29?date_from=2025-03-08&date_to=2025-03-15){:target="_blank"}
+- [катамаран покруче](https://saysail.com/en/yacht/bali-46-solo-star-fethiye-lykia-yacht-club-turkey/28?date_from=2025-03-08&date_to=2025-03-15){:target="_blank"}
 
