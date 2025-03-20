@@ -21,8 +21,7 @@
 title: DLKN
 email: kostozy@gmail.com
 description: >- ## О сайте
-  Добро пожаловать на официальный сайт нашего яхтингового сообщества! 
-  Здесь вы найдете всю необходимую информацию для планирования и участия в наших совместных путешествиях по Средиземному морю. 
+  Полезная информация для яхтенного клуба DLKN ≈ 
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://dlkn.club" # the base hostname & protocol for your site, e.g. http://example.com
 
