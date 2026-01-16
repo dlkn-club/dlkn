@@ -1,48 +1,96 @@
 <!DOCTYPE html>
-<html lang="{{ site.lang | default: "en-US" }}">
+<html lang="{{ site.lang | default: "ru" }}">
   <head>
-    <meta charset="UTF-8">
-
-{% seo %}
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link rel="preload" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" as="style" type="text/css" crossorigin>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="theme-color" content="#157878">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
-    {% include head-custom.html %}
-    <style>
-      .dlkn-header {
-        position: relative;
-        padding: 1rem 4rem;
-        width: 100%;
-      }
-      .dlkn-header a {
-        position: absolute;
-        left: 20px;
-        top: 0;
-        bottom: 0;
-        z-index: 1000;
-        margin: auto;
-        width: auto;
-        height: fit-content;
-      }
-      .dlkn-header h1 {
-        margin: 0;
-        font-size: 2rem;
-        font-weight: 600;
-      }
-    </style>
+    {% include head.html %}
   </head>
-  <body>
-    <a id="skip-to-content" href="#content">Skip to the content.</a>
-    <header class="page-header dlkn-header" role="banner">
-      <a href="/" class="btn">На главную</a>
-      <h1>DLKN ≈ Дулкын</h1>
-    </header>
+  <body class="{% if page.url == '/' %}is-home{% endif %}">
+    
+    {% include header.html %}
+    {% if page.url == '/' %}
+      <div class="grid-overlay" aria-hidden="true">
+        <div class="grid-overlay__guide grid-overlay__guide--left" data-label="L-300"></div>
+        <div class="grid-overlay__guide grid-overlay__guide--right" data-label="R-300"></div>
+        <div class="grid-overlay__cols">
+          <div class="grid-overlay__col" data-label="C1"></div>
+          <div class="grid-overlay__col" data-label="C2"></div>
+          <div class="grid-overlay__col" data-label="C3"></div>
+          <div class="grid-overlay__col" data-label="C4"></div>
+          <div class="grid-overlay__col" data-label="C5"></div>
+          <div class="grid-overlay__col" data-label="C6"></div>
+        </div>
+      </div>
+    {% endif %}
+    <div class="page-layer">
+      <div class="page-hero">
+        {% if page.url == '/' %}
+          {% include hero.html %}
+        {% endif %}
+      </div>
+      <div class="page-body{% if page.url != '/' %} page-body--no-sidebar{% endif %}">
+        {% if page.url == '/' %}
+          <div class="page-cta" aria-hidden="true">
+            <a class="hero-cta hero-cta--page" href="https://t.me/doctorsolberg">Пойти с нами</a>
+          </div>
+        {% endif %}
+        {% if page.url == '/' %}
+          {% include sidebar.html %}
+        {% endif %}
+        <main class="page-main page-content">
+          {{ content }}
+        </main>
+      </div>
+    </div>
+    <footer class="footer-layer">
+      {% include footer.html %}
+    </footer>
+    <script>
+      (function () {
+        const stack = document.querySelector(".stack");
+        const loader = document.querySelector(".stack__loader");
+        const heroImage = document.querySelector(".hero__image");
+        const pageBody = document.querySelector(".page-body");
+        const clamp = (value, min, max) => Math.min(Math.max(value, min), max);
+        function updatePageCta() {
+          if (!pageBody) return;
+          const bodyTop = pageBody.getBoundingClientRect().top;
+          const isVisible = bodyTop <= window.innerHeight;
+          document.body.classList.toggle("is-page-cta-visible", isVisible);
+        }
 
-    <main id="content" class="main-content" role="main">
-      {{ content }}
-    </main>
+        function onStackScroll() {
+          if (stack && loader) {
+            const rect = stack.getBoundingClientRect();
+            const travel = stack.offsetHeight - window.innerHeight;
+            const scrolled = clamp(-rect.top, 0, travel);
+            const progress = travel ? scrolled / travel : 0;
+            loader.style.transform = `translateY(${-progress * window.innerHeight}px)`;
+            if (heroImage) {
+              const scale = 1 + progress * 0.08;
+              heroImage.style.setProperty("--hero-scale", scale.toFixed(3));
+            }
+          }
+          updatePageCta();
+        }
+
+        onStackScroll();
+        window.addEventListener("scroll", onStackScroll, { passive: true });
+        window.addEventListener("resize", onStackScroll);
+
+        const footerLayer = document.querySelector(".footer-layer");
+        if (footerLayer) {
+          const root = document.documentElement;
+          const updateFooterHeight = () => {
+            root.style.setProperty("--footer-h", `${footerLayer.offsetHeight}px`);
+          };
+          updateFooterHeight();
+          if (window.ResizeObserver) {
+            const observer = new ResizeObserver(updateFooterHeight);
+            observer.observe(footerLayer);
+          } else {
+            window.addEventListener("resize", updateFooterHeight);
+          }
+        }
+      })();
+    </script>
   </body>
 </html>

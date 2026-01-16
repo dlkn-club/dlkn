@@ -1,5 +1,5 @@
 ---
-layout: main
+layout: default
 ---
 
 # Приёмка лодки (Boat Handover): как всё проверить и ничего не забыть

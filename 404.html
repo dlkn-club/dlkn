@@ -4,10 +4,21 @@ layout: default
 ---
 
 <style type="text/css" media="screen">
-  .container {
-    margin: 10px auto;
-    max-width: 600px;
+  .page-404 {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     text-align: center;
+    padding: 40px 20px;
+  }
+  .page-404__center {
+    margin: auto 0;
+    max-width: 600px;
+  }
+  .page-404__bottom {
+    width: 100%;
+    padding-bottom: 40px;
   }
   h1 {
     margin: 30px 0;
@@ -15,11 +26,59 @@ layout: default
     line-height: 1;
     letter-spacing: -1px;
   }
+  .lead {
+    margin-top: 24px;
+    margin-bottom: 12px;
+  }
+  .hint {
+    margin-top: 0;
+  }
+  .neo-segment {
+    display: inline-flex;
+    padding: 6px;
+    gap: 6px;
+    border-radius: 999px;
+    background: var(--bg);
+    box-shadow: inset 4px 4px 10px rgba(27, 38, 54, 0.1),
+      inset -4px -4px 10px rgba(255, 255, 255, 0.85);
+    margin: 10px 0 18px;
+  }
+  .neo-segment a {
+    padding: 8px 10px;
+    border-radius: 999px;
+    color: var(--ink);
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+    font-weight: 500;
+    transition: box-shadow 160ms ease;
+  }
+  .neo-segment a:hover {
+    box-shadow: 6px 6px 12px color-mix(in srgb, var(--accent) 65%, transparent),
+      -6px -6px 12px rgba(255, 255, 255, 0.9);
+  }
+  .neo-segment img {
+    width: 16px;
+    height: 16px;
+    display: block;
+  }
 </style>
 
-<div class="container">
-  <h1>404</h1>
-
-  <p><strong>Страница не найдена :(</strong></p>
-  <p>Возможно, утонула.</p>
+<div class="page-404">
+  <div class="page-404__center">
+    <h1>404</h1>
+    <p>What are you sinking about?</p>
+    <div class="neo-segment" role="navigation" aria-label="404 actions">
+      <a href="/">Домой</a>
+      <a href="https://t.me/doctorsolberg" aria-label="Telegram">
+        <img src="{{ '/assets/icons/tg.svg' | relative_url }}" alt="">
+      </a>
+    </div>
+  </div>
+  <div class="page-404__bottom">
+    <p class="lead"><strong>Страница не найдена :(</strong></p>
+    <p class="hint">Возможно, утонула.</p>
+  </div>
 </div>

@@ -1,0 +1,26 @@
+<section class="stack">
+  <div class="stack__viewport">
+    <div class="stack__hero hero">
+      <div id="hero-anchor" class="hero-anchor" aria-hidden="true"></div>
+      <div class="hero-media">
+        <picture>
+          <source media="(max-width: 1023px)" srcset="{{ '/assets/yachts.svg' | relative_url }}">
+          <img class="hero__image" src="{{ '/assets/hero.svg' | relative_url }}" alt="Hero">
+        </picture>
+      </div>
+      <div class="hero-text">
+        <a class="hero-title" href="/latest">Весенний поход <span class="hero-title__year">`26</span></a>
+        <div class="hero-subtitle">Полная турецкая классика: симиты, красивые бухты и флотилия татар</div>
+      </div>
+    </div>
+    <div class="stack__loader">
+      <div class="hero-logo" aria-label="Loading">
+        <img class="hero-logo__base" src="{{ '/assets/crcl.svg' | relative_url }}" alt="">
+        <img class="hero-logo__text" src="{{ '/assets/text.svg' | relative_url }}" alt="">
+      </div>
+      <div class="loader-scroll" aria-hidden="true">
+        <span class="loader-scroll__dot"></span>
+      </div>
+    </div>
+  </div>
+</section>
