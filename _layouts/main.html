@@ -33,7 +33,9 @@
           </div>
         {% endif %}
         {% if page.url == '/' %}
-          {% include sidebar.html %}
+          <div class="page-sidebar">
+            {% include sidebar.html %}
+          </div>
         {% endif %}
         <main class="page-main page-content">
           {{ content }}

@@ -5,9 +5,18 @@
   </head>
   <body>
     {% include header.html %}
-    <main class="page">
-      {{ content }}
-    </main>
-    {% include footer.html %}
+    <div class="page-body{% if page.url == '/404.html' %} page-body--no-sidebar{% endif %}">
+      {% unless page.url == '/404.html' %}
+        <div class="page-sidebar">
+          {% include sidebar.html %}
+        </div>
+      {% endunless %}
+      <main class="page-main page-content">
+        {{ content }}
+      </main>
+    </div>
+    {% unless page.url == '/404.html' %}
+      {% include footer.html %}
+    {% endunless %}
   </body>
 </html>

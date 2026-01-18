@@ -4,21 +4,46 @@ layout: default
 ---
 
 <style type="text/css" media="screen">
+  .page-body--no-sidebar {
+    padding: 0;
+  }
+
+  .page-content {
+    padding: 0;
+  }
+
   .page-404 {
+    position: relative;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
     padding: 40px 20px;
+    overflow: hidden;
+    isolation: isolate;
+    --page-404-shift-y: -12vh;
   }
   .page-404__center {
-    margin: auto 0;
+    position: absolute;
+    inset: 0;
+    display: grid;
+    place-items: center;
+    text-align: center;
     max-width: 600px;
+    margin: 0 auto;
+    z-index: 1;
+    transform: translateY(var(--page-404-shift-y));
   }
   .page-404__bottom {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
     width: 100%;
     padding-bottom: 40px;
+    z-index: 1;
+    transform: translateY(var(--page-404-shift-y));
   }
   h1 {
     margin: 30px 0;
@@ -64,17 +89,73 @@ layout: default
     height: 16px;
     display: block;
   }
+
+  .page-404__orbit {
+    position: absolute;
+    inset: 0;
+    display: grid;
+    place-items: center;
+    z-index: 0;
+    pointer-events: none;
+    transform: translateY(var(--page-404-shift-y));
+  }
+
+  .page-404__orbit-svg {
+    width: clamp(260px, 54vw, 520px);
+    height: clamp(260px, 54vw, 520px);
+    animation: orbit-rotate 22s linear infinite;
+  }
+
+  .page-404__orbit-text {
+    font-family: "Druk Wide Cyr", "Jost", "Helvetica Neue", Arial, sans-serif;
+    font-size: 9px;
+    letter-spacing: 0.35em;
+    text-transform: uppercase;
+    fill: var(--accent);
+  }
+
+  .page-404__orbit-center {
+    position: absolute;
+    width: clamp(120px, 22vw, 200px);
+    height: clamp(120px, 22vw, 200px);
+    border-radius: 50%;
+    background: var(--bg);
+  }
+
+  @keyframes orbit-rotate {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
 </style>
 
 <div class="page-404">
+  <div class="page-404__orbit" aria-hidden="true">
+    <svg class="page-404__orbit-svg" viewBox="0 0 200 200">
+      <defs>
+        <path id="orbit-text-path" d="M100,100 m-72,0 a72,72 0 1,1 144,0 a72,72 0 1,1 -144,0" />
+      </defs>
+      <text class="page-404__orbit-text">
+        <textPath href="#orbit-text-path" startOffset="0%" textLength="452" lengthAdjust="spacing">
+          HALAL WIND   ~   BOMONTI TIME   ~   HALAL WIND   ~   BOMONTI TIME   ~
+        </textPath>
+      </text>
+    </svg>
+    <div class="page-404__orbit-center"></div>
+  </div>
   <div class="page-404__center">
-    <h1>404</h1>
-    <p>What are you sinking about?</p>
-    <div class="neo-segment" role="navigation" aria-label="404 actions">
-      <a href="/">Домой</a>
-      <a href="https://t.me/doctorsolberg" aria-label="Telegram">
-        <img src="{{ '/assets/icons/tg.svg' | relative_url }}" alt="">
-      </a>
+    <div class="page-404__cluster">
+      <h1>404</h1>
+      <p>What are you sinking about?</p>
+      <div class="neo-segment" role="navigation" aria-label="404 actions">
+        <a href="/">Домой</a>
+        <a href="https://t.me/doctorsolberg" aria-label="Telegram">
+          <img src="{{ '/assets/icons/tg.svg' | relative_url }}" alt="">
+        </a>
+      </div>
     </div>
   </div>
   <div class="page-404__bottom">

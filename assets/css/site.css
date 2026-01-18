@@ -1317,13 +1317,15 @@ img {
 }
 
 .page-body {
-  display: grid;
-  grid-template-columns: auto 1fr;
-  column-gap: var(--gap);
+  display: block;
   padding: var(--hero-gap) 0 var(--sidebar-bottom) var(--gap);
   align-items: start;
   background: var(--bg);
   position: relative;
+}
+
+.is-home .page-body {
+  padding-left: 0;
 }
 
 .page-body--no-sidebar {
@@ -1332,6 +1334,14 @@ img {
 
 .page-main {
   min-width: 0;
+}
+
+.page-sidebar {
+  position: absolute;
+  top: var(--hero-gap);
+  bottom: var(--sidebar-bottom);
+  left: var(--gap);
+  width: max-content;
 }
 
 .footer-layer {
