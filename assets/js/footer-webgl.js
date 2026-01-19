@@ -121,16 +121,12 @@
       "  vec2 uv = gl_FragCoord.xy / u_resolution;\n" +
       "  vec2 p = uv * 2.0 - 1.0;\n" +
       "  float t = u_time * 0.45;\n" +
-      "  float colIndex = floor(uv.x * 12.0);\n" +
-      "  float colCenter = (colIndex + 0.5) / 12.0;\n" +
-      "  float colPos = fract(uv.x * 12.0);\n" +
-      "  float edgeDist = min(colPos, 1.0 - colPos);\n" +
-      "  float edgeMask = 1.0 - smoothstep(0.0, 0.35, edgeDist);\n" +
-      "  float colShift = -(colIndex * 20.0) / u_resolution.y;\n" +
+      "  float colShift = 0.0;\n" +
       "  float refract = 0.0;\n" +
       "  float micro = 0.0;\n" +
       "  p.y += colShift;\n" +
-      "  float flow = sin(p.x * 2.2 + t) * 0.34;\n" +
+      "  p.y -= 40.0 / u_resolution.y;\n" +
+      "  float flow = sin(p.x * 1.88496 + t) * 0.32;\n" +
       "  float surface = p.y + flow;\n" +
       "  float band = smoothstep(0.18, -0.38, surface);\n" +
       "  float contrastBand = pow(band, 2.2);\n" +
@@ -172,7 +168,8 @@
       "  vec2 uv = gl_FragCoord.xy / u_resolution;\n" +
       "  vec2 p = uv * 2.0 - 1.0;\n" +
       "  float t = u_time * 0.45;\n" +
-      "  float flow = sin(p.x * 2.2 + t) * 0.34;\n" +
+      "  float flow = sin(p.x * 1.88496 + t) * 0.34;\n" +
+      "  p.y -= 40.0 / u_resolution.y;\n" +
       "  float surface = p.y + flow;\n" +
       "  float band = smoothstep(0.18, -0.38, surface);\n" +
       "  float contrastBand = pow(band, 2.2);\n" +
@@ -183,8 +180,7 @@
       "  vec3 bg = mix(wave, u_white, highlight) + u_blue * glow * 0.35 + u_white * glow * 0.18;\n" +
       "  float alpha = texture2D(u_text, uv).a;\n" +
       "  float luminance = dot(bg, vec3(0.2126, 0.7152, 0.0722));\n" +
-      "  float mixFactor = smoothstep(0.35, 0.85, luminance);\n" +
-      "  vec3 textColor = mix(u_white, u_ink, mixFactor);\n" +
+      "  vec3 textColor = u_white;\n" +
       "  gl_FragColor = vec4(textColor, alpha);\n" +
       "}\n";
 

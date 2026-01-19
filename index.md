@@ -152,38 +152,60 @@ title: Добро пожаловать в наш круг 🛟
           <a class="neo-pin home-neo-map-label home-neo-map-label--kekova" href="/places/turkey/kekova">о. Кекова</a>
           <a class="neo-pin home-neo-map-label home-neo-map-label--kemer" href="/places/turkey/kemer">Кемер</a>
           <a class="neo-pin home-neo-map-label home-neo-map-label--antalya" href="/places/turkey/antalya">Анталия</a>
-          <a class="neo-pin home-neo-map-label home-neo-map-label--sink" href="/capitans/lifehacks">how to sink correctly</a>
+          <div class="home-neo-map-label home-neo-map-label--sink">
+            <a class="neo-pin" href="/capitans/lifehacks">how to sink correctly</a>
+            <div class="home-neo-map-label__coords" aria-hidden="true">
+              <span>36°39′N&nbsp;&nbsp;29°06′E</span>
+              <span class="home-neo-map-label__coords-line"></span>
+              <span>36°54′N&nbsp;&nbsp;30°41′E</span>
+            </div>
+          </div>
         </div>
       </div>
       <div class="home-neo-captains">
         <div class="neo-card home-neo-captain home-neo-captain--grid">
-          <div class="home-neo-captain__media home-neo-captain__media--doc">
-            <img src="{{ '/assets/captains/doctorsolberg.svg' | relative_url }}" alt="doctorsolberg">
+          <h3 class="home-neo-captains__title">Капитаны флота</h3>
+          <div class="home-neo-captain__list">
+            <div class="home-neo-captain__media home-neo-captain__media--doc">
+              <img src="{{ '/assets/captains/doctorsolberg.svg' | relative_url }}" alt="doctorsolberg">
+            </div>
+          <div class="neo-segment home-neo-captain__actions home-neo-captain__actions--1">
+            <a class="neo-btn neo-btn--pill neo-btn--ghost" href="https://www.boataround.com/boat/jeanneau-sun-odyssey-490-elenor" target="_blank" rel="noopener noreferrer">Elenor</a>
+            <span class="home-neo-captain__price">€ 975 /неделя</span>
           </div>
-          <div class="neo-segment home-neo-captain__boat home-neo-captain__boat--1">
-            <a class="neo-btn neo-btn--pill home-neo-captain__boat-name" href="https://www.boataround.com/boat/jeanneau-sun-odyssey-490-elenor" target="_blank" rel="noopener noreferrer">Elenor</a>
-            <span class="home-neo-captain__boat-price">€ 975 /неделя</span>
-          </div>
-          <div class="neo-segment home-neo-captain__boat home-neo-captain__boat--2">
-            <a class="neo-btn neo-btn--pill home-neo-captain__boat-name" href="https://www.boataround.com/boat/dufour-470-pontika" target="_blank" rel="noopener noreferrer">Pontika</a>
-            <span class="home-neo-captain__boat-price">€ 975 /неделя</span>
-          </div>
-          <div class="neo-segment home-neo-captain__boat home-neo-captain__boat--3">
-            <a class="neo-btn neo-btn--pill home-neo-captain__boat-name" href="https://www.boataround.com/ru/yachta/dufour-470-gusto-7" target="_blank" rel="noopener noreferrer">Gusto 7</a>
-            <span class="home-neo-captain__boat-price">€ 1007 /неделя</span>
-          </div>
-          <div class="neo-segment home-neo-captain__boat home-neo-captain__boat--4">
-            <a class="neo-btn neo-btn--pill home-neo-captain__boat-name" href="https://www.boataround.com/ru/yachta/dufour-470-gusto-7" target="_blank" rel="noopener noreferrer">Gusto 7</a>
-            <span class="home-neo-captain__boat-price">€ 1007 /неделя</span>
-          </div>
+          <a class="neo-btn neo-btn--ghost home-neo-captain__tg home-neo-captain__tg--1" href="https://t.me/doctorsolberg" aria-label="Telegram">
+            <img class="sidebar__icon" src="{{ '/assets/icons/tg.svg' | relative_url }}" alt="">
+          </a>
           <div class="home-neo-captain__media home-neo-captain__media--kostozy">
             <img src="{{ '/assets/captains/kostozy.svg' | relative_url }}" alt="kostozy">
           </div>
+          <div class="neo-segment home-neo-captain__actions home-neo-captain__actions--2">
+            <a class="neo-btn neo-btn--pill neo-btn--ghost" href="https://www.boataround.com/boat/dufour-470-pontika" target="_blank" rel="noopener noreferrer">Pontika</a>
+            <span class="home-neo-captain__price">€ 975 /неделя</span>
+          </div>
+          <a class="neo-btn neo-btn--ghost home-neo-captain__tg home-neo-captain__tg--2" href="https://t.me/kostozy" aria-label="Telegram">
+            <img class="sidebar__icon" src="{{ '/assets/icons/tg.svg' | relative_url }}" alt="">
+          </a>
           <div class="home-neo-captain__media home-neo-captain__media--apesoshin">
             <img src="{{ '/assets/captains/apesoshin.svg' | relative_url }}" alt="apesoshin">
           </div>
+          <div class="neo-segment home-neo-captain__actions home-neo-captain__actions--3">
+            <a class="neo-btn neo-btn--pill neo-btn--ghost" href="https://www.boataround.com/ru/yachta/dufour-470-gusto-7" target="_blank" rel="noopener noreferrer">Gusto 7</a>
+            <span class="home-neo-captain__price">€ 1007 /неделя</span>
+          </div>
+          <a class="neo-btn neo-btn--ghost home-neo-captain__tg home-neo-captain__tg--3" href="https://t.me/apesoshin" aria-label="Telegram">
+            <img class="sidebar__icon" src="{{ '/assets/icons/tg.svg' | relative_url }}" alt="">
+          </a>
           <div class="home-neo-captain__media home-neo-captain__media--rafael">
             <img src="{{ '/assets/captains/RafaelValeev.svg' | relative_url }}" alt="Rafael Valeev">
+          </div>
+          <div class="neo-segment home-neo-captain__actions home-neo-captain__actions--4">
+            <a class="neo-btn neo-btn--pill neo-btn--ghost" href="https://www.boataround.com/ru/yachta/dufour-470-gusto-7" target="_blank" rel="noopener noreferrer">Gusto 7</a>
+            <span class="home-neo-captain__price">€ 1007 /неделя</span>
+          </div>
+          <a class="neo-btn neo-btn--ghost home-neo-captain__tg home-neo-captain__tg--4" href="https://t.me/RafaelValeev" aria-label="Telegram">
+            <img class="sidebar__icon" src="{{ '/assets/icons/tg.svg' | relative_url }}" alt="">
+          </a>
           </div>
         </div>
       </div>

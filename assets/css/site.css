@@ -354,7 +354,7 @@ a:hover {
 }
 
 .home-neo-avia-meta {
-  font-size: 12px;
+  font-size: 11px;
   color: var(--neo-muted);
   letter-spacing: 0.02em;
 }
@@ -463,6 +463,30 @@ a:hover {
   display: block;
 }
 
+.home-neo-map-label__coords {
+  margin-top: 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 18px;
+  font-family: "Jost", "Helvetica Neue", Arial, sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  color: var(--ink);
+  white-space: nowrap;
+  pointer-events: none;
+}
+
+.home-neo-map-label__coords-line {
+  height: 1.5px;
+  width: auto;
+  background: var(--ink);
+  border-radius: 999px;
+  flex: 1 1 90px;
+  max-width: 200px;
+  min-width: 50px;
+}
+
 .home-neo-map-label--dlm {
   left: 9.7%;
   top: 33%;
@@ -526,6 +550,10 @@ a:hover {
   bottom: 80px;
   top: auto;
   transform: translate(-50%, 0);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
 }
 
 .home-neo-calendar__header {
@@ -552,15 +580,14 @@ a:hover {
   grid-row: 1 / span 2;
 }
 
-.home-neo-captains {
-  grid-column: 1;
-  grid-row: 2;
-  display: grid;
-  grid-template-rows: auto;
-  gap: 0;
-  width: 100%;
-  height: auto;
-  outline: 1px solid #7aa7ff;
+.home-neo-captains__title {
+  margin: 0 0 8px;
+  font-size: 18px;
+  letter-spacing: 0.08em;
+  text-transform: none;
+  font-family: "Druk Wide Cyr", "Jost", "Helvetica Neue", Arial, sans-serif;
+  color: var(--ink);
+  line-height: 1;
 }
 
 .home-neo-captain {
@@ -575,13 +602,41 @@ a:hover {
 
 .home-neo-captain--grid {
   display: grid;
-  grid-template-columns: repeat(4, auto);
-  grid-template-rows: repeat(4, auto);
-  gap: 8px 10px;
+  grid-template-columns: repeat(3, auto);
+  grid-template-rows: auto 1fr;
+  gap: 8px 6px;
   align-items: center;
   align-content: start;
   height: auto;
-  outline: 1px solid #ff6b6b;
+}
+
+.home-neo-captains {
+  grid-column: 1;
+  grid-row: 2;
+  display: grid;
+  grid-template-rows: auto;
+  gap: 0;
+  width: 100%;
+  height: auto;
+}
+
+.home-neo-captain--grid .home-neo-captains__title {
+  grid-column: 1 / -1;
+  grid-row: 1;
+  align-self: start;
+}
+
+.home-neo-captain__list {
+  grid-column: 1 / -1;
+  grid-row: 2;
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  grid-template-rows: repeat(4, 42px);
+  column-gap: 6px;
+  row-gap: 8px;
+  align-items: center;
+  align-content: end;
+  height: auto;
 }
 
 .home-neo-captain-cta {
@@ -609,7 +664,6 @@ a:hover {
   font-weight: 700;
   color: var(--neo-text);
   line-height: 1;
-  outline: 1px solid #ff5b5b;
 }
 
 .home-neo-captain-cta__text {
@@ -618,7 +672,6 @@ a:hover {
   color: var(--neo-muted);
   line-height: 1;
   margin-top: 0;
-  outline: 1px solid #4aa3ff;
 }
 
 .home-neo-captain-cta__link {
@@ -638,7 +691,6 @@ a:hover {
       calc(var(--neo-shadow-size) * 0.75) var(--neo-shadow-light);
   grid-column: 2;
   grid-row: 1 / span 2;
-  outline: 1px solid #f2a93b;
 }
 
 .home-neo-captain-cta__link:hover,
@@ -647,10 +699,6 @@ a:hover {
       calc(var(--neo-shadow-size) * 0.75) color-mix(in srgb, var(--blue) 65%, transparent),
     calc(var(--neo-shadow-size) * -0.5) calc(var(--neo-shadow-size) * -0.5)
       calc(var(--neo-shadow-size) * 0.75) var(--neo-shadow-light);
-}
-
-.home-neo-captain-cta {
-  outline: 1px solid #62d98f;
 }
 
 .home-neo-captain-cta__link img {
@@ -662,13 +710,6 @@ a:hover {
 .home-neo-captain__media {
   justify-self: start;
   align-self: start;
-}
-
-.home-neo-captain__media,
-.home-neo-captain__boat,
-.home-neo-captain__boat-name,
-.home-neo-captain__boat-price {
-  outline: 1px solid #4aa3ff;
 }
 
 .home-neo-captain__media img {
@@ -696,14 +737,99 @@ a:hover {
   grid-row: 1;
 }
 
+.home-neo-captain__actions {
+  grid-column: 2;
+  display: grid;
+  grid-template-columns: max-content auto;
+  align-items: center;
+  height: 42px !important;
+  box-sizing: border-box;
+}
+
+.home-neo-captain__actions--1 {
+  grid-row: 1;
+}
+
+.home-neo-captain__actions--2 {
+  grid-row: 2;
+}
+
+.home-neo-captain__actions--3 {
+  grid-row: 3;
+}
+
+.home-neo-captain__actions--4 {
+  grid-row: 4;
+}
+
+.home-neo-captain__actions.neo-segment {
+  padding: 6px;
+  box-sizing: border-box;
+  gap: 6px;
+  align-items: center;
+}
+
+.home-neo-captain__actions .neo-btn {
+  height: calc(100% - 1px);
+  width: 9ch;
+  padding: 0 6px;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+.home-neo-captain__price {
+  color: var(--grey);
+  font-size: 12px;
+  white-space: nowrap;
+  align-self: center;
+  padding-right: 2px;
+}
+
+.home-neo-captain__tg {
+  grid-column: 3;
+  justify-self: end;
+  width: 42px !important;
+  height: 42px !important;
+  min-width: 42px;
+  min-height: 42px;
+  padding: 0;
+  justify-content: center;
+  border-radius: 50%;
+  box-sizing: border-box;
+}
+
+.home-neo-captain__tg--1 {
+  grid-row: 1;
+}
+
+.home-neo-captain__tg--2 {
+  grid-row: 2;
+}
+
+.home-neo-captain__tg--3 {
+  grid-row: 3;
+}
+
+.home-neo-captain__tg--4 {
+  grid-row: 4;
+}
+
+.home-neo-captain__tg:hover,
+.home-neo-captain__tg:focus-visible {
+  box-shadow: calc(var(--neo-shadow-size) * 0.5) calc(var(--neo-shadow-size) * 0.5)
+      calc(var(--neo-shadow-size) * 0.75) var(--neo-shadow-dark),
+    calc(var(--neo-shadow-size) * -0.5) calc(var(--neo-shadow-size) * -0.5)
+      calc(var(--neo-shadow-size) * 0.75) var(--neo-shadow-light);
+}
+
 .home-neo-captain__boat {
   grid-column: 2 / span 2;
   display: grid;
-  grid-template-columns: auto 1fr;
+  grid-template-columns: auto auto;
   align-items: center;
-  gap: 8px;
+  gap: 6px;
   height: 42px;
-  padding: 0 8px 0 0;
+  padding: 6px;
 }
 
 .home-neo-captain__boat--1 {
@@ -727,16 +853,20 @@ a:hover {
 }
 
 .home-neo-captain__boat-name.neo-btn {
-  height: 32px;
-  padding: 0 12px;
+  height: 42px;
+  padding: 0 14px;
   font-size: 12px;
 }
 
 .home-neo-captain__boat-price {
   justify-self: end;
   font-size: 12px;
-  color: var(--neo-muted);
+  color: var(--grey);
   white-space: nowrap;
+}
+
+.home-neo-captain__boat .neo-btn {
+  height: 42px;
 }
 
 .home-neo-captain__media--kostozy {
@@ -1542,24 +1672,6 @@ img {
   pointer-events: none;
 }
 
-.footer-glass {
-  position: absolute;
-  inset: 0 0 0 0;
-  z-index: 1;
-  display: grid;
-  grid-template-columns: repeat(12, minmax(0, 1fr));
-  gap: 0;
-  pointer-events: none;
-}
-
-.footer-glass__pane {
-  border-radius: 0;
-  background: transparent;
-  border: 0;
-  box-shadow: none;
-  backdrop-filter: none;
-  -webkit-backdrop-filter: none;
-}
 
 
 .site-footer__joke {
