@@ -1,5 +1,6 @@
 ---
 layout: default
+permalink: /capitans/boat
 ---
 
 # Приёмка лодки (Boat Handover): как всё проверить и ничего не забыть

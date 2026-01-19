@@ -1,5 +1,6 @@
 ---
 layout: default
+permalink: /capitans/instructions
 ---
 
 # Распределение ролей на лодке и инструктаж по безопасности

@@ -1,5 +1,6 @@
 ---
 layout: default
+permalink: /capitans/lifehacks
 ---
 # Лайфхаки по ветру: как читать признаки и использовать прогнозы
 

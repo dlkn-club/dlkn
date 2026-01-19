@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Neumorphism Demo
+permalink: /neo-demo
 ---
 
 <section class="section section--beige neo-demo">
@@ -9,6 +10,18 @@ title: Neumorphism Demo
       <div class="neo-demo__item">
         <div class="neo-demo__label">Кнопка ghost reversed: neo-btn--ghost-reversed</div>
         <button class="neo-btn neo-btn--pill neo-btn--ghost-reversed" type="button">Найти</button>
+      </div>
+      <div class="neo-demo__item">
+        <div class="neo-demo__label">Кнопка pill с иконкой слева: neo-btn--pill neo-btn--icon-left</div>
+        <button class="neo-btn neo-btn--pill neo-btn--icon-left" type="button">
+          <span class="neo-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" role="img" aria-hidden="true" focusable="false">
+              <circle cx="11" cy="11" r="7" />
+              <path d="M20 20l-3.5-3.5" />
+            </svg>
+          </span>
+          Найти
+        </button>
       </div>
       <div class="neo-demo__item">
         <div class="neo-demo__label">Контейнер: neo-surface</div>

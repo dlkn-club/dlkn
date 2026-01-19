@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Общая информация
+permalink: /about
 ---
 
 # Общая информация

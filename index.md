@@ -30,7 +30,7 @@ title: Добро пожаловать в наш круг 🛟
               </a>
             </div>
             <div>
-              Анталья:
+              Анталия:
               <a class="home-neo-avia-link" href="https://maps.app.goo.gl/cchKMRUHgMuiye7o6" target="_blank" rel="noopener noreferrer">
                 Setur Antalya Marina
               </a>
@@ -133,6 +133,59 @@ title: Добро пожаловать в наш круг 🛟
       <div class="neo-inset home-neo-isolines">
         <img src="{{ '/assets/изолинии.svg' | relative_url }}" alt="Изолинии">
         <img src="{{ '/assets/маршрут.svg' | relative_url }}" alt="Маршрут">
+        <div class="home-neo-map-labels" aria-hidden="true">
+          <a class="neo-pin home-neo-map-label home-neo-map-label--dlm" href="https://www.aviasales.ru/search/KZN0805DLM1?marker=15468.gaasru8877gclidCjwKCAiAybfLBhAjEiwAI0mBBpIJL-Si9aqG55SgLVUdHqpKntTURUX0bBnn8WnpKFOObeu7Ek5baxoCASoQAvD_BwEgclid&gad_source=1&gad_campaignid=1446491904&gbraid=0AAAAADm3qxuGdO4KAfLsT9gAfGJHHg7VY&gclid=CjwKCAiAybfLBhAjEiwAI0mBBpIJL-Si9aqG55SgLVUdHqpKntTURUX0bBnn8WnpKFOObeu7Ek5baxoCASoQAvD_BwE" target="_blank" rel="noopener noreferrer">
+            <span class="home-neo-map-label__icon">
+              <img src="{{ '/assets/plane.svg' | relative_url }}" alt="">
+            </span>
+            DLM
+          </a>
+          <a class="neo-pin home-neo-map-label home-neo-map-label--ayt" href="https://www.aviasales.ru/search/AYT1605KZN1?marker=15468.gaasru8877gclidCjwKCAiAybfLBhAjEiwAI0mBBpIJL-Si9aqG55SgLVUdHqpKntTURUX0bBnn8WnpKFOObeu7Ek5baxoCASoQAvD_BwEgclid&gad_source=1&gad_campaignid=1446491904&gbraid=0AAAAADm3qxuGdO4KAfLsT9gAfGJHHg7VY&gclid=CjwKCAiAybfLBhAjEiwAI0mBBpIJL-Si9aqG55SgLVUdHqpKntTURUX0bBnn8WnpKFOObeu7Ek5baxoCASoQAvD_BwE" target="_blank" rel="noopener noreferrer">
+            <span class="home-neo-map-label__icon">
+              <img src="{{ '/assets/plane.svg' | relative_url }}" alt="">
+            </span>
+            AYT
+          </a>
+          <a class="neo-pin home-neo-map-label home-neo-map-label--fethiye" href="/places/turkey/fethiye">Фетхие</a>
+          <a class="neo-pin home-neo-map-label home-neo-map-label--oludeniz" href="/places/turkey/oludeniz">Олюдениз</a>
+          <a class="neo-pin home-neo-map-label home-neo-map-label--kas" href="/places/turkey/kas">Каш</a>
+          <a class="neo-pin home-neo-map-label home-neo-map-label--kekova" href="/places/turkey/kekova">о. Кекова</a>
+          <a class="neo-pin home-neo-map-label home-neo-map-label--kemer" href="/places/turkey/kemer">Кемер</a>
+          <a class="neo-pin home-neo-map-label home-neo-map-label--antalya" href="/places/turkey/antalya">Анталия</a>
+        </div>
+      </div>
+      <div class="home-neo-captains">
+        <div class="neo-card home-neo-captain home-neo-captain--grid">
+          <div class="home-neo-captain__media home-neo-captain__media--doc">
+            <img src="{{ '/assets/captains/doctorsolberg.svg' | relative_url }}" alt="doctorsolberg">
+          </div>
+          <div class="neo-card neo-inset home-neo-captain__boat">
+            <span class="neo-btn neo-btn--pill home-neo-captain__boat-name" aria-label="Название лодки">Название лодки</span>
+            <span class="home-neo-captain__boat-price">Стоимость места</span>
+          </div>
+          <div class="home-neo-captain__media home-neo-captain__media--kostozy">
+            <img src="{{ '/assets/captains/kostozy.svg' | relative_url }}" alt="kostozy">
+          </div>
+          <div class="home-neo-captain__media home-neo-captain__media--apesoshin">
+            <img src="{{ '/assets/captains/apesoshin.svg' | relative_url }}" alt="apesoshin">
+          </div>
+          <div class="home-neo-captain__media home-neo-captain__media--rafael">
+            <img src="{{ '/assets/captains/RafaelValeev.svg' | relative_url }}" alt="Rafael Valeev">
+          </div>
+          <a class="neo-btn neo-btn--ghost neo-btn--pill home-neo-captain__media home-neo-captain__media--tg" href="https://t.me/doctorsolberg" aria-label="Telegram">
+            <img src="{{ '/assets/icons/tg.svg' | relative_url }}" alt="">
+          </a>
+          <a class="neo-btn neo-btn--ghost neo-btn--pill home-neo-captain__media home-neo-captain__media--tg home-neo-captain__media--tg-2" href="https://t.me/kostozy" aria-label="Telegram">
+            <img src="{{ '/assets/icons/tg.svg' | relative_url }}" alt="">
+          </a>
+          <a class="neo-btn neo-btn--ghost neo-btn--pill home-neo-captain__media home-neo-captain__media--tg home-neo-captain__media--tg-3" href="https://t.me/apesoshin" aria-label="Telegram">
+            <img src="{{ '/assets/icons/tg.svg' | relative_url }}" alt="">
+          </a>
+          <a class="neo-btn neo-btn--ghost neo-btn--pill home-neo-captain__media home-neo-captain__media--tg home-neo-captain__media--tg-4" href="https://t.me/RafaelValeev" aria-label="Telegram">
+            <img src="{{ '/assets/icons/tg.svg' | relative_url }}" alt="">
+          </a>
+        </div>
+        <div class="neo-card neo-inset home-neo-captain"></div>
       </div>
     </div>
     <div class="neo-demo__grid">
