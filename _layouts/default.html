@@ -22,10 +22,14 @@
         {% include footer.html %}
       </footer>
     {% endunless %}
+    <script src="{{ '/assets/js/footer-webgl.js' | relative_url }}"></script>
     <script>
       (function () {
         const footerLayer = document.querySelector(".footer-layer");
         if (!footerLayer) return;
+        if (window.initFooterWebGL) {
+          window.initFooterWebGL(footerLayer);
+        }
         const root = document.documentElement;
         const updateFooterHeight = () => {
           root.style.setProperty("--footer-h", `${footerLayer.offsetHeight}px`);

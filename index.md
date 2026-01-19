@@ -49,8 +49,8 @@ title: Добро пожаловать в наш круг 🛟
           <span class="home-neo-meta-accent">осталось 5 мест</span>
         </div>
         <div class="neo-card__actions">
-          <button class="neo-btn neo-btn--pill" type="button">Занять место</button>
-          <button class="neo-btn neo-btn--pill neo-btn--ghost" type="button">Подробнее</button>
+          <a class="neo-btn neo-btn--pill" href="https://t.me/doctorsolberg" target="_blank" rel="noopener noreferrer">Занять место</a>
+          <a class="neo-btn neo-btn--pill neo-btn--ghost" href="/next-trip">Подробнее</a>
         </div>
       </div>
       <div class="neo-card home-neo-card home-neo-trip home-neo-trip--east">
@@ -64,8 +64,8 @@ title: Добро пожаловать в наш круг 🛟
           <span class="home-neo-meta-accent">осталось 6 мест</span>
         </div>
         <div class="neo-card__actions">
-          <button class="neo-btn neo-btn--pill" type="button">Занять место</button>
-          <button class="neo-btn neo-btn--pill neo-btn--ghost" type="button">Подробнее</button>
+          <a class="neo-btn neo-btn--pill" href="https://t.me/doctorsolberg" target="_blank" rel="noopener noreferrer">Занять место</a>
+          <a class="neo-btn neo-btn--pill neo-btn--ghost" href="/next-trip">Подробнее</a>
         </div>
       </div>
     </div>
@@ -152,6 +152,7 @@ title: Добро пожаловать в наш круг 🛟
           <a class="neo-pin home-neo-map-label home-neo-map-label--kekova" href="/places/turkey/kekova">о. Кекова</a>
           <a class="neo-pin home-neo-map-label home-neo-map-label--kemer" href="/places/turkey/kemer">Кемер</a>
           <a class="neo-pin home-neo-map-label home-neo-map-label--antalya" href="/places/turkey/antalya">Анталия</a>
+          <a class="neo-pin home-neo-map-label home-neo-map-label--sink" href="/capitans/lifehacks">how to sink correctly</a>
         </div>
       </div>
       <div class="home-neo-captains">
@@ -159,9 +160,21 @@ title: Добро пожаловать в наш круг 🛟
           <div class="home-neo-captain__media home-neo-captain__media--doc">
             <img src="{{ '/assets/captains/doctorsolberg.svg' | relative_url }}" alt="doctorsolberg">
           </div>
-          <div class="neo-card neo-inset home-neo-captain__boat">
-            <span class="neo-btn neo-btn--pill home-neo-captain__boat-name" aria-label="Название лодки">Название лодки</span>
-            <span class="home-neo-captain__boat-price">Стоимость места</span>
+          <div class="neo-segment home-neo-captain__boat home-neo-captain__boat--1">
+            <a class="neo-btn neo-btn--pill home-neo-captain__boat-name" href="https://www.boataround.com/boat/jeanneau-sun-odyssey-490-elenor" target="_blank" rel="noopener noreferrer">Elenor</a>
+            <span class="home-neo-captain__boat-price">€ 975 /неделя</span>
+          </div>
+          <div class="neo-segment home-neo-captain__boat home-neo-captain__boat--2">
+            <a class="neo-btn neo-btn--pill home-neo-captain__boat-name" href="https://www.boataround.com/boat/dufour-470-pontika" target="_blank" rel="noopener noreferrer">Pontika</a>
+            <span class="home-neo-captain__boat-price">€ 975 /неделя</span>
+          </div>
+          <div class="neo-segment home-neo-captain__boat home-neo-captain__boat--3">
+            <a class="neo-btn neo-btn--pill home-neo-captain__boat-name" href="https://www.boataround.com/ru/yachta/dufour-470-gusto-7" target="_blank" rel="noopener noreferrer">Gusto 7</a>
+            <span class="home-neo-captain__boat-price">€ 1007 /неделя</span>
+          </div>
+          <div class="neo-segment home-neo-captain__boat home-neo-captain__boat--4">
+            <a class="neo-btn neo-btn--pill home-neo-captain__boat-name" href="https://www.boataround.com/ru/yachta/dufour-470-gusto-7" target="_blank" rel="noopener noreferrer">Gusto 7</a>
+            <span class="home-neo-captain__boat-price">€ 1007 /неделя</span>
           </div>
           <div class="home-neo-captain__media home-neo-captain__media--kostozy">
             <img src="{{ '/assets/captains/kostozy.svg' | relative_url }}" alt="kostozy">
@@ -172,20 +185,7 @@ title: Добро пожаловать в наш круг 🛟
           <div class="home-neo-captain__media home-neo-captain__media--rafael">
             <img src="{{ '/assets/captains/RafaelValeev.svg' | relative_url }}" alt="Rafael Valeev">
           </div>
-          <a class="neo-btn neo-btn--ghost neo-btn--pill home-neo-captain__media home-neo-captain__media--tg" href="https://t.me/doctorsolberg" aria-label="Telegram">
-            <img src="{{ '/assets/icons/tg.svg' | relative_url }}" alt="">
-          </a>
-          <a class="neo-btn neo-btn--ghost neo-btn--pill home-neo-captain__media home-neo-captain__media--tg home-neo-captain__media--tg-2" href="https://t.me/kostozy" aria-label="Telegram">
-            <img src="{{ '/assets/icons/tg.svg' | relative_url }}" alt="">
-          </a>
-          <a class="neo-btn neo-btn--ghost neo-btn--pill home-neo-captain__media home-neo-captain__media--tg home-neo-captain__media--tg-3" href="https://t.me/apesoshin" aria-label="Telegram">
-            <img src="{{ '/assets/icons/tg.svg' | relative_url }}" alt="">
-          </a>
-          <a class="neo-btn neo-btn--ghost neo-btn--pill home-neo-captain__media home-neo-captain__media--tg home-neo-captain__media--tg-4" href="https://t.me/RafaelValeev" aria-label="Telegram">
-            <img src="{{ '/assets/icons/tg.svg' | relative_url }}" alt="">
-          </a>
         </div>
-        <div class="neo-card neo-inset home-neo-captain"></div>
       </div>
     </div>
     <div class="neo-demo__grid">

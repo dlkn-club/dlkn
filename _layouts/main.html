@@ -42,9 +42,11 @@
         </main>
       </div>
     </div>
+    <div class="footer-sentinel" aria-hidden="true"></div>
     <footer class="footer-layer">
       {% include footer.html %}
     </footer>
+    <script src="{{ '/assets/js/footer-webgl.js' | relative_url }}"></script>
     <script>
       (function () {
         const stack = document.querySelector(".stack");
@@ -80,6 +82,9 @@
 
         const footerLayer = document.querySelector(".footer-layer");
         if (footerLayer) {
+          if (window.initFooterWebGL) {
+            window.initFooterWebGL(footerLayer);
+          }
           const root = document.documentElement;
           const updateFooterHeight = () => {
             root.style.setProperty("--footer-h", `${footerLayer.offsetHeight}px`);
@@ -91,6 +96,43 @@
           } else {
             window.addEventListener("resize", updateFooterHeight);
           }
+
+          const footerSentinel = document.querySelector(".footer-sentinel");
+          if ("IntersectionObserver" in window && footerSentinel) {
+            const footerObserver = new IntersectionObserver(
+              (entries) => {
+                entries.forEach((entry) => {
+                  footerLayer.classList.toggle("footer--active", entry.isIntersecting);
+                });
+              },
+              { threshold: 0.1 }
+            );
+            // Trigger motion only when the footer is revealed.
+            footerObserver.observe(footerSentinel);
+          } else {
+            footerLayer.classList.add("footer--active");
+          }
+
+          const footerBands = footerLayer.querySelector(".footer-glass-bands");
+          if (footerBands) {
+            const count = Number(footerBands.dataset.bandCount) || 18;
+            const fragment = document.createDocumentFragment();
+            for (let i = 0; i < count; i += 1) {
+              const band = document.createElement("span");
+              band.className = "footer-glass-band";
+              const width = 4 + Math.random() * 7;
+              const left = (i + Math.random()) * (100 / count);
+              const opacity = 0.12 + Math.random() * 0.22;
+              const blur = 0.8 + Math.random() * 2.4;
+              band.style.width = `${width}%`;
+              band.style.left = `${left}%`;
+              band.style.opacity = opacity.toFixed(2);
+              band.style.filter = `blur(${blur.toFixed(2)}px)`;
+              fragment.appendChild(band);
+            }
+            footerBands.appendChild(fragment);
+          }
+
         }
       })();
     </script>
