@@ -7,6 +7,10 @@ title: Neumorphism Demo
   <div class="section__inner neo-theme">
     <div class="neo-demo__grid">
       <div class="neo-demo__item">
+        <div class="neo-demo__label">Кнопка ghost reversed: neo-btn--ghost-reversed</div>
+        <button class="neo-btn neo-btn--pill neo-btn--ghost-reversed" type="button">Найти</button>
+      </div>
+      <div class="neo-demo__item">
         <div class="neo-demo__label">Контейнер: neo-surface</div>
         <div class="neo-surface">
           Небольшой контент‑блок
