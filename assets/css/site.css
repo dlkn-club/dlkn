@@ -985,6 +985,7 @@ a:hover {
     flex-direction: column;
     width: auto;
     margin: 0;
+    padding: 0 5px 0 60px;
   }
 
   .home-neo-cards > .neo-card {
@@ -1248,6 +1249,42 @@ img {
     font-size: 17px;
   }
 
+  .home-neo-cards {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+    width: min(100%, calc(100vw - (var(--grid-outer) * 1.2)));
+  }
+
+  .home-neo-cards--top {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .home-neo-avia-card {
+    grid-column: 1 / -1;
+  }
+
+  .home-neo-cards--bottom {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-rows: auto auto auto;
+  }
+
+  .home-neo-cards--bottom .home-neo-calendar {
+    grid-column: 1 / -1;
+    grid-row: 1;
+  }
+
+  .home-neo-cards--bottom .home-neo-isolines {
+    grid-column: 1 / -1;
+    grid-row: 2;
+  }
+
+  .home-neo-captains {
+    grid-column: 1 / 2;
+    grid-row: 3;
+    width: 100%;
+    justify-self: start;
+  }
+
   .hero-title {
     font-size: clamp(20px, 3.4vw, 38px);
   }
@@ -1280,6 +1317,23 @@ img {
   /* мобилка */
   .hero-title__year {
     display: none;
+  }
+
+  .home-neo-cards {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    width: 100%;
+  }
+
+  .home-neo-cards--bottom {
+    grid-template-rows: auto;
+  }
+
+  .home-neo-cards--bottom .home-neo-calendar,
+  .home-neo-cards--bottom .home-neo-isolines,
+  .home-neo-captains {
+    grid-column: 1;
+    grid-row: auto;
   }
 
   .home-neo-card {
@@ -1615,6 +1669,12 @@ img {
   bottom: var(--sidebar-bottom);
   left: var(--gap);
   width: max-content;
+}
+
+@media (max-width: 767px) {
+  .page-sidebar {
+    left: 5px;
+  }
 }
 
 .footer-sentinel {
